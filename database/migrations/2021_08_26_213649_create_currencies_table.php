@@ -14,8 +14,11 @@ class CreateCurrenciesTable extends Migration
     public function up()
     {
         Schema::create('currencies', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('name', 100);
+            $table->string('logo', 100)->nullable();
+            $table->string('api_id', 15);
         });
     }
 
