@@ -90,31 +90,31 @@
     <!-- Main Content style="margin-left: 10px" -->
     <div >
       <!-- Topbar -->
-      <nav style="background-color: rgb(234, 239, 240) " class="navbar navbar-expand navbar-light bg-black topbar mb-4 static-top shadow">
+      <nav class="navbar navbar-expand navbar-light bg-dark  topbar mb-4 static-top shadow">
         <!-- Sidebar Toggle (Topbar) -->
-        <h2 id="logo">BitChest</h2>
-<ul  class="navbar-nav ml-auto">
+        <h2 class="text-white">BitChest</h2>
+<ul  class="navbar-nav ml-auto ">
 
 <li  class="nav-item active" @if($section == 'currencies') active @endif">
-    <a class="nav-link" href="{{ route('currencies.index') }}">Dashboard</a>
+    <a class="nav-link text-white" href="{{ route('currencies.index') }}">Dashboard</a>
   </li>
 
 <li class="nav-item active" @if($section == 'wallet') active @endif">
-    <a class="nav-link" href="{{ route('wallet') }}">Wallet</a>
+    <a class="nav-link text-white" href="{{ route('wallet') }}">Wallet</a>
   </li>
 
 <li class="nav-item active" @if($section == 'transactions') active @endif">
-    <a class="nav-link" href="{{ route('transactions.index') }}">Transactions</a>
+    <a class="nav-link text-white" href="{{ route('transactions.index') }}">Transactions</a>
   </li>
 
 <li style="margin-right: 120px;" class="nav-item active" @if($section == 'wallet') active @endif">
-    <a class="nav-link" style="font-weight: bold ;" href="#">Balance :
+    <a class="nav-link text-white" style="font-weight: bold ;" href="#">Balance :
         <span id="balance">{{ session('balance') }} {{ config('currency')['symbol'] }}</span>
     </a>
 </li>
 
 <li class="nav-item dropdown no-arrow">
-    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-user-circle"></i>
     </a>
     <!-- Dropdown - User Information -->
