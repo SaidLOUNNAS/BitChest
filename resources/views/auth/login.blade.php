@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- login --}}
- <section style="background-color: #2a4561;">
+ <section style="background-color: #91a0a1;">
     <div class="container py-5 h-100">
         <div class="col-12 mb-4">
             <h1 style="color: #ffffff;" class="text-center">Discover the world of cryptos</h1>

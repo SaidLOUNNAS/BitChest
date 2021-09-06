@@ -101,20 +101,15 @@
   #sidebar.hidden {
     left: -98%;
   }
+
+.buying-inputs {
+    display: none;
+  }
   #sidebar #toggleNav {
     display: flex;
   }
 
 }
-.change-caret-up {
-  color: #58ee58;
-}
-.change-caret-down {
-  color: #ff3c3c;
-}
 
-.buying-inputs {
-  display: none;
-}
 
 

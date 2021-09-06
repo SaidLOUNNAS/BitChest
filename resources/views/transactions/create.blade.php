@@ -55,10 +55,8 @@
     </div>
      <input type="hidden" name="currency_id" value="{{ $currency->id }}">
      <input type="hidden" name="currency_api_id" value="{{ $currency->api_id }}">
-     <button type="submit" class="btn btn-primary">submit</button>
+     <button type="submit" class="pull-right btn btn-block btn-primary" >submit</button>
   </form>
-  <br/>
-  <a href="{{ route('currencies.index') }}" class="pull-right btn btn-block btn-outline-secondary" >Cancel</a>
       </div>
 </div>
 </div>
