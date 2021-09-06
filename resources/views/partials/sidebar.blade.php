@@ -1,7 +1,7 @@
 
 {{-- only admin --}}
 @if (Auth::user()->status == 'admin')
-<nav  id="sidebar" class="hidden position-fixed d-flex flex-column justify-content-between p-3">
+<nav  id="sidebar" class="hidden position-fixed d-flex flex-column justify-content-between p-3 ">
     <div id="toggleNav" class="justify-content-center align-items-center">
         <i class="fas fa-lg fa-bars"></i>
     </div>
@@ -40,12 +40,12 @@
         <!-- Main Content -->
         <div style="margin-left: 240px">
           <!-- Topbar -->
-          <nav style="background-color: rgb(234, 239, 240) " class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <nav class="navbar navbar-expand navbar-light bg-dark topbar mb-4 static-top shadow navbar-light ">
             <!-- Sidebar Toggle (Topbar) -->
-            <h2 id="logo">Dashboard</h2>
+            <h2 class="text-white">Dashboard</h2>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item no-arrow active">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" role="button"
+                <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="modal" role="button"
                 data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i><strong>Logout</strong>
                 </a>
