@@ -19,8 +19,9 @@ class UsersTableSeeder extends Seeder
         // create user
         User::factory()->count(10)->create();
          // create Admin
-        DB::table('user')->insert([
-            'first_name'=>'admin',
+        DB::table('users')->insert([
+            'first_name' => 'Admin',
+            'last_name' => 'Admin',
             'email'=>'said.lounnas1@gmail.com',
             'password'=>Hash::make('AdminAdmin')
           ]);

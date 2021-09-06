@@ -7,7 +7,7 @@
     <h1 class="text-center mb-4">Discover the world of cryptos</h1>
 </div>
      <!-- show table of currency -->
-     <table class="table card-body mb-0">
+     <table class="table card-body ml-4">
         <tbody>
           <thead>
             <tr>

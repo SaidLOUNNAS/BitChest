@@ -20,10 +20,10 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                     <div class="d-flex align-items-center mb-3 pb-1">
-                      <span class="h1 fw-bold mb-0"><h2>Login Page</h2></span>
+                      <span class="h1 fw-bold mb-0">Welcome To Bitchest</span>
                     </div>
 
-                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login from here to access.</h5>
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login From Here To Access</h5>
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="email">{{ __('E-Mail Address') }}</label>
