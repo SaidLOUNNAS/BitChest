@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -69,7 +68,7 @@ class UserController extends Controller
     {
         $request->validate([
             // Check if email hasn't already been taken
-            'email'     => 'unique:App\User,email',
+            'email'     => 'unique:App\Models\User,email',
             // Check if password  confirmed
             'password'  => 'confirmed'
         ]);
@@ -117,7 +116,7 @@ class UserController extends Controller
     {
         $request->validate([
             // Check if email hasn't already been taken
-            'email' => 'unique:App\User,email,' . $user->id . ',id'
+            'email' => 'unique:App\Models\User,email,' . $user->id . ',id'
         ]);
         // Update the user
         $user->update($request->all());
@@ -137,7 +136,7 @@ class UserController extends Controller
     public function updateAccount(Request $request, User $user)
     {
         $request->validate([
-            'email' => 'unique:App\User,email,' . $user->id . ',id'
+            'email' => 'unique:App\Models\User,email,' . $user->id . ',id'
         ]);
         // update user
         $user->update($request->all());

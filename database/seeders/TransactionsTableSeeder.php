@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use Illuminate\Support\Arr;
+use App\Models\Transaction;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 class TransactionsTableSeeder extends Seeder
@@ -13,9 +14,9 @@ class TransactionsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Transaction::class, 200)->create();
+        Transaction::factory()->count(200)->create();
 
-        // Delete admin
+        // Delete admin transaction
         $admins = DB::table('users')->where('status', 'admin')->get('id')->toArray();
         $admin_ids = Arr::pluck($admins, 'id');
 

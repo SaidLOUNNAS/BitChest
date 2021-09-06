@@ -39,12 +39,11 @@ class CurrencyController extends Controller
     }
 
     /**
-     * Display a currency's rate history.
+     * Display a currency's.
      */
     public function show(Currency $currency, API $api)
     {
         $days = $api->getHistory($currency->api_id);
-
         return view('currencies.show', [
             'title' => 'History of ' . $currency->name,
             'currency' => $currency,

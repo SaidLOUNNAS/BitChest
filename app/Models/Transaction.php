@@ -2,7 +2,7 @@
 
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Transaction extends Model
 {
     public $timestamps = false;
@@ -12,6 +12,7 @@ class Transaction extends Model
      *
      * @var array
      */
+    use HasFactory;
     protected $fillable = [
         'currency_id', 'user_id', 'amount', 'quantity', 'purchase_price', 'purchase_date', 'sold', 'selling_amount', 'selling_date'
     ];
@@ -31,10 +32,10 @@ class Transaction extends Model
     protected $casts = [];
 
     /**
-     * Get the currency linked to transaction.
+     * the currency linked to transaction.
      */
     public function currency()
     {
-        return $this->belongsTo('App\Currency');
+        return $this->belongsTo('App\Models\Currency');
     }
 }

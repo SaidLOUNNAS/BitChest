@@ -40,7 +40,7 @@ class API extends Model
                 'tsyms' => $conversion_currency
             ]
         ]);
-        // Get data from JSON
+        // Get data
         $price = json_decode($response->getBody())->$conversion_currency;
 
         return $price;
@@ -95,7 +95,7 @@ class API extends Model
                 'limit' => $limit
             ]
         ]);
-        // Get data from JSON
+        // Get data
         $data = json_decode($response->getBody())->Data->Data;
 
         // Filter API data to keep only relevent data
