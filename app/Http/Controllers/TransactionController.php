@@ -28,7 +28,7 @@ class TransactionController extends Controller
             });
         }
 
-        date_default_timezone_set('Europe');    }
+        date_default_timezone_set('Europe/Paris');    }
 
     /**
      * Display the user's transactions (all of them or by currency).
