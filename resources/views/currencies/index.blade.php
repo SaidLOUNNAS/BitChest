@@ -4,7 +4,11 @@
 @section('content')
 {{-- title --}}
 <div class="col-12">
+    @if (Auth::user()->status == 'admin')
+    <h1 class="text-center mb-4">The world of cryptos</h1>
+    @elseif (Auth::user()->status == 'client')
     <h1 class="text-center mb-4">Discover the world of cryptos</h1>
+    @endif
 </div>
      <!-- show table of currency -->
      <table class="table card-body ml-4">

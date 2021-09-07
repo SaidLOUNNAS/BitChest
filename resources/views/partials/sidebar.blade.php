@@ -42,7 +42,7 @@
           <!-- Topbar -->
           <nav class="navbar navbar-expand navbar-light bg-dark topbar mb-4 static-top shadow navbar-light ">
             <!-- Sidebar Toggle (Topbar) -->
-            <h2 class="text-white">Dashboard</h2>
+            <h2 class="text-white">Dashboard - Admin</h2>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item no-arrow active">
                 <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="modal" role="button"
@@ -108,7 +108,7 @@
   </li>
 
 <li style="margin-right: 120px;" class="nav-item active" @if($section == 'wallet') active @endif">
-    <a class="nav-link text-white" style="font-weight: bold ;" href="#">Balance :
+    <a class="nav-link text-white" style="font-weight: bold ;" >Balance :
         <span id="balance">{{ session('balance') }} {{ config('currency')['symbol'] }}</span>
     </a>
 </li>

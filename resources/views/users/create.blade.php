@@ -63,11 +63,9 @@
         <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" minlength="8" maxlength="100" required>
       </div>
 {{-- submit --}}
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="pull-right btn btn-block btn-primary" >Submit</button>
   </form>
-  <br/>
-  <a href="{{ route('users.index') }}" class="pull-right btn btn-block btn-danger" > Cancel   </a>
-      </div>
+    </div>
 </div>
 </div>
 </div>

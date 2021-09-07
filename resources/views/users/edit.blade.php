@@ -52,10 +52,8 @@
             <label for="email">E-mail : </label>
             <input type="text" class="form-control" name="email" id="email" maxlength="100" value="{{ $user->email }}" required>
           </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="pull-right btn btn-block btn-primary">Submit</button>
       </form>
-      <br/>
-      <a href="{{ route('users.index') }}" class="pull-right btn btn-block btn-danger">Cancel</a>
           </div>
     </div>
 </div>
