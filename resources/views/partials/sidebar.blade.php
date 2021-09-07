@@ -24,8 +24,8 @@
                         <span class="text-capitalize ml-2">Users</span>
                     </li>
                 </a>
-            <a href="{{ route('account.edit') }}">
-                <li class="sidebar-item d-flex align-items-center mb-2 @if($section == 'account') active @endif">
+            <a href="{{ route('profile.edit') }}">
+                <li class="sidebar-item d-flex align-items-center mb-2 @if($section == 'profile') active @endif">
                     <i class="fas fa-lg fa-user-circle"></i>
                     <span class="text-capitalize ml-2">Profile</span>
                 </li>
@@ -119,7 +119,7 @@
     </a>
     <!-- Dropdown - User Information -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="{{ route('account.edit') }}" @if($section == 'account') active @endif>
+        <a class="dropdown-item" href="{{ route('profile.edit') }}" @if($section == 'profile') active @endif>
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             Profile
         </a>

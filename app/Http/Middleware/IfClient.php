@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckIfClient
+class IfClient
 {
     /**
      * Handle an incoming request.
@@ -14,11 +14,5 @@ class CheckIfClient
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
-    {
-        if (Auth::user()->status != 'client') {
-            return redirect('home');
-        }
-        return $next($request);
-    }
+
 }

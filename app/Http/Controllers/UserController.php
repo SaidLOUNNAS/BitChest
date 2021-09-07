@@ -17,9 +17,9 @@ class UserController extends Controller
      */
     public function __construct(Request $request)
     {
-        if (Str::contains($request->path(), 'account')) {
+        if (Str::contains($request->path(), 'profile')) {
             view()->composer('layouts.layout', function ($view) {
-                $view->with('section', 'account');
+                $view->with('section', 'profile');
             });
         } else {
             view()->composer('layouts.layout', function ($view) {
@@ -95,14 +95,14 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for editing the logged user's account.
+     * Show the form for editing the logged user's profile.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function editAccount()
+    public function editProfile()
     {
-        return view('account.edit', ['user' => Auth::user()]);
+        return view('profile.edit', ['user' => Auth::user()]);
     }
 
     /**
@@ -133,7 +133,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updateAccount(Request $request, User $user)
+    public function updateProfile(Request $request, User $user)
     {
         $request->validate([
             'email' => 'unique:App\Models\User,email,' . $user->id . ',id'

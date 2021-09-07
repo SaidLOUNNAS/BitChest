@@ -38,10 +38,10 @@ Route::middleware('auth', 'balance')->group(function () {
 
     Route::middleware('admin')->resource('users', 'UserController')->except(['show']);
 
-    // account
-    Route::prefix('account')->name('account.')->group(function () {
-        Route::get('/edit', [UserController::class, 'editAccount'])->name('edit');
-        Route::patch('/{user}', [UserController::class, 'updateAccount'])->name('update');
+    // profile
+    Route::prefix('profile')->name('profile.')->group(function () {
+        Route::get('/edit', [UserController::class, 'editProfile'])->name('edit');
+        Route::patch('/{user}', [UserController::class, 'updateProfile'])->name('update');
     });
 
     Route::middleware('client')->get('/wallet', [WalletController::class, 'index'])->name('wallet');

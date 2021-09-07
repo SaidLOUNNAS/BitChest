@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', "Account")
+@section('title', "Profile")
 
 @section('content')
 {{-- profile --}}
