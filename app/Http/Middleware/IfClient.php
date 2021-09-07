@@ -14,5 +14,11 @@ class IfClient
      * @param  \Closure  $next
      * @return mixed
      */
-
+    public function handle(Request $request, Closure $next)
+    {
+        if (Auth::user()->status != 'client') {
+            return redirect('home');
+        }
+        return $next($request);
+    }
 }
