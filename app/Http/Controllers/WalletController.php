@@ -32,7 +32,7 @@ class WalletController extends Controller
             ->where('sold', 0)
             ->groupBy('currency_id')
             ->map(function ($row) {
-                   // Fill API IDs array for API call
+                   // Fill API ID array for API call
                     $this->api_ids[] = $row->first()->currency->api_id;
                     return [
                         'currency'  => $row->first()->currency,

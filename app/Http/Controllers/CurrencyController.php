@@ -19,7 +19,7 @@ class CurrencyController extends Controller
     }
 
     /**
-     * Display the currencies list with their current rate.
+     * Display the currencies list
      */
     public function index(API $api)
     {
@@ -27,7 +27,6 @@ class CurrencyController extends Controller
         $currencies = Currency::all();
         // Get data
         $data = $api->getMultipleData($currencies->pluck('api_id')->implode(','));
-
         // Loop through all cryptocurrencies
         foreach ($currencies as $currency) {
             $currency_data = $data[$currency->api_id];
@@ -45,7 +44,6 @@ class CurrencyController extends Controller
     {
         $days = $api->getHistory($currency->api_id);
         return view('currencies.show', [
-            'title' => 'History of ' . $currency->name,
             'currency' => $currency,
             'days' => $days
         ]);
