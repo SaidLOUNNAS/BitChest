@@ -33,17 +33,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item ">
-                            <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link text-white" href="{{ route('login') }}" >{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item ">
-                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('register') }}</a>
+                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                          @endif
                         @else

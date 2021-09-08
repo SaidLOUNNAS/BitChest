@@ -20,7 +20,6 @@
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3"></i>
                       <span class="h1 fw-bold mt-0">Welcome To Bitchest</span>
@@ -78,7 +77,7 @@
                     </div>
                     <div class="pt-1 mb-4">
                         <button type="submit" class="btn btn-dark btn-lg btn-block">
-                            {{ __('Login') }}
+                            {{ __('register') }}
                         </button>
                     </div>
                 </form>
