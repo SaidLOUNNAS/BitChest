@@ -17,11 +17,13 @@
               <th>Coin</th>
               <th>Last prize</th>
               <th>Markets</th>
+              <th></th>
             </tr>
           </thead>
           @foreach ($currencies as $currency)
           <tr>
-              <td>{{ $currency->name }} <span style="color: #707A8A;">
+              <td><img src="{{ asset($currency->logo) }}" alt="Logo" class="mr-3">
+                {{ $currency->name }} <span style="color: #707A8A;">
               {{ $currency->api_id }} </span></td>
               <td>
                   <span @if ($currency->change == '+') style="color: #58ee58;" @else style="color: #ff0f07;" @endif>
