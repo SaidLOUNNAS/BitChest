@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- login --}}
- <section style="background-image: url('https://soto.house.gov/sites/soto.house.gov/files/featured_image/Retina_Display-758591537.jpg'); height: 100%;">
+ <section style="background-color:black;">
     <div class="container py-5 h-100">
         <div class="col-12 mb-4">
             <h1 class="text-center text-white">Discover the world of cryptos</h1>
