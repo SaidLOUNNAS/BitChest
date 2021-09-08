@@ -6,7 +6,7 @@
             <h1 class="text-center">Markets {{ $currency->name }}</h1>
             <div class="card-body" style="float: right;">
                   <!-- button to buy -->
-                  <div class="form-group">
+                  <div class="">
                       <a href="{{ route('transactions.create', $currency->id) }}" class="btn btn-primary" style="border-radius: 0.35rem;" >To Buy</a>
                   </div>
               </div>
@@ -15,7 +15,8 @@
 {{-- display chart plugin js--}}
 <div class="row">
     <div class="col-12">
-        <canvas id="marketsChart"></canvas>
+        <canvas style="height: 150px !important;
+        width: 350px !important;" id="marketsChart"></canvas>
     </div>
 </div>
 @endsection

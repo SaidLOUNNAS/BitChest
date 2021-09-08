@@ -40,7 +40,7 @@
                           @endif
                         {{-- customer only--}}
                       @elseif (Auth::user()->status == 'client')
-                           <a href="{{ route('currencies.show', $currency->id) }}" role="button">
+                        <a href="{{ route('currencies.show', $currency->id) }}" >
                             @if ($currency->change == '+')
                           <img style="width: 90px;" src="https://images.cryptocompare.com/sparkchart/SOL/USD/latest.png?ts=1631085600" alt="15308-200" border="0" />
                           @else
