@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', $title)
+@section('title', 'Chart')
 @section('content')
     <div class="row">
         <div class="col-12">

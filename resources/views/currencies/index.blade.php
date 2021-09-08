@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 @section('title', 'Cryptocurrency')
-
 @section('content')
 {{-- title --}}
 <div class="col-12">
@@ -15,7 +14,7 @@
         <tbody>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Coin</th>
               <th>Last prize</th>
               <th>Markets</th>
             </tr>
@@ -33,15 +32,19 @@
                       {{-- only for admin --}}
                     @if (Auth::user()->status == 'admin')
                           @if ($currency->change == '+')
-                          <i style="color: #58ee58" class="fas fa-arrow-up"></i>
+                          <img style="width: 90px;" src="https://images.cryptocompare.com/sparkchart/SOL/USD/latest.png?ts=1631085600" alt="15308-200" border="0" />
                           @else
-                          <i style="color: red" class="fas fa-arrow-down"></i>
+                          <img style="width: 90px;" src="https://images.cryptocompare.com/sparkchart/BTC/USD/latest.png?ts=1631085600" alt="15308-200" border="0" />
                           @endif
                         {{-- customer only--}}
                       @elseif (Auth::user()->status == 'client')
                            <a href="{{ route('currencies.show', $currency->id) }}" role="button">
-                        <img style="width: 30px; height:30px" src="https://i.ibb.co/74smnQW/15308-200.png" alt="15308-200" border="0" />
-                    </a>
+                            @if ($currency->change == '+')
+                          <img style="width: 90px;" src="https://images.cryptocompare.com/sparkchart/SOL/USD/latest.png?ts=1631085600" alt="15308-200" border="0" />
+                          @else
+                          <img style="width: 90px;" src="https://images.cryptocompare.com/sparkchart/BTC/USD/latest.png?ts=1631085600" alt="15308-200" border="0" />
+                          @endif
+                        </a>
                         <td><a class="btn btn-sm btn-primary" href="{{ route('transactions.create', $currency->id) }}" role="button">To Buy</a></td>
                       @endif
                     </td>

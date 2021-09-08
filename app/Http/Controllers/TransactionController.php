@@ -122,7 +122,7 @@ class TransactionController extends Controller
 
         return redirect()
             ->route('wallet')
-            ->with('message', 'The transaction was successful. You bought : ' . round($transaction->quantity, 6) . ' ' . $transaction->currency->name . ' for an amount of ' . $transaction->amount . ' ' . config('currency')['symbol'] . '.');
+            ->with('message', 'The transaction was successful. Your bought : ' . round($transaction->quantity, 6) . ' ' . $transaction->currency->name . ' for an amount of ' . $transaction->amount . ' ' . config('currency')['symbol'] . '.');
     }
 
     /**
@@ -142,7 +142,7 @@ class TransactionController extends Controller
 
             return redirect()
                 ->route('wallet')
-                ->with('message', 'The transaction was successful. You sold : ' . floatval($transaction->quantity) . ' ' . $currency->name . ' for an amount of ' . round($request->selling_amount, 2) . ' ' . config('currency')['symbol'] . '.');
+                ->with('message', 'The transaction was successful. Your sold : ' . floatval($transaction->quantity) . ' ' . $currency->name . ' for an amount of ' . round($request->selling_amount, 2) . ' ' . config('currency')['symbol'] . '.');
         } else {
             $quantity_total = 0;
             $selling_amount_total = 0;
@@ -168,7 +168,7 @@ class TransactionController extends Controller
 
             return redirect()
                 ->route('wallet')
-                ->with('message', 'The transaction was successful. You sold : ' . floatval($quantity_total) . ' ' . $currency->name . ' for an amount of ' . round($selling_amount_total, 2) . ' ' . config('currency')['symbol'] . '.');
+                ->with('message', 'The transaction was successful. Your sold : ' . floatval($quantity_total) . ' ' . $currency->name . ' for an amount of ' . round($selling_amount_total, 2) . ' ' . config('currency')['symbol'] . '.');
         }
     }
 }
