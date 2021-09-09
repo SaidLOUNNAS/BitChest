@@ -26,7 +26,7 @@
     transition: 0.2s;
   }
   #sidebar .sidebar-item.active {
-    background-color: #ff0000;
+    background-color: #5399e0;
     padding-left: 0.5rem;
   }
   #sidebar .sidebar-item span {
