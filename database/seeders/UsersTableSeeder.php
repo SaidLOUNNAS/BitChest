@@ -19,13 +19,22 @@ class UsersTableSeeder extends Seeder
         // create user
         User::factory()->count(10)->create();
          // create Admin
-        DB::table('users')->insert([
+        DB::table('users')->insert(array([
             'first_name' => 'Admin',
             'last_name' => 'Admin',
             'email'=>'admin@admin.com',
             'status' => 'admin',
             'password'=>Hash::make('AdminAdmin'),
-        ]);
+        ],
+        [
+            'first_name' => 'customer',
+            'last_name' => 'customer',
+            'email'=>'customer@customer.com',
+            'status' => 'client',
+            'password'=>Hash::make('CustomerCustomer'),
+
+
+        ]));
 
     }
 }
