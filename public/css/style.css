@@ -18,7 +18,7 @@
 }
 @media (max-width: 767px) {
   #mainContainer #content {
-    margin-left: 0;
+    margin: -15rem;
   }
 }
 #sidebar .sidebar-item {
@@ -63,7 +63,8 @@
   width: 3rem;
   height: 3rem;
   right: -3rem;
-  background-color: #ff0000;
+  top: -3px;
+  background-color: #3490dc;
   border-radius: 0 0.5rem 0.5rem 0;
   cursor: pointer;
 }
@@ -97,6 +98,14 @@
   #sidebar {
     width: 100%;
     font-size: 1rem;
+  }
+@media (max-width: 767px) {
+  .tow {
+    display: none;
+  }
+@media (max-width: 767px) {
+  .tow {
+    display: none;
   }
   #sidebar.hidden {
     left: -98%;

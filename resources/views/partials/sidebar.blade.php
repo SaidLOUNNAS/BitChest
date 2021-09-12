@@ -40,11 +40,11 @@
         <!-- Main Content -->
         <div style="margin-left: 240px">
           <!-- Topbar -->
-          <nav class="navbar navbar-expand navbar-light bg-dark topbar mb-4 static-top shadow navbar-light ">
+          <nav class="navbar navbar-expand navbar-light bg-dark topbar mb-4 static-top shadow navbar-light">
             <!-- Sidebar Toggle (Topbar) -->
-            <h2 class="text-white">Dashboard - Admin</h2>
+            <h2 class="text-white tow">Dashboard - Admin</h2>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item no-arrow active">
+              <li class="nav-item no-arrow tes active">
                 <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="modal" role="button"
                 data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i><strong>Logout</strong>
